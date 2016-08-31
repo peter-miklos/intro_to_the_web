@@ -12,8 +12,9 @@ get '/secret' do
 end
 
 get '/random-cat' do
-  @name = ["jo", "stf", "summer"].sample
-erb :index
+  @arr = ["jo", "stf", "summer"].sample
+  @name = params[:name]
+  erb :index
 end
 
 post '/named-cat' do
